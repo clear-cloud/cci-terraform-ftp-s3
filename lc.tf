@@ -27,7 +27,7 @@ resource "aws_launch_configuration" "ftp" {
 # Render Bastion bootstrap file
 # ---------------------------------------
 data "template_file" "user_data" {
-  template   = "${file("${path.module}/userdata.sh")}"
+  template = "${file("${path.module}/userdata.sh")}"
 
   vars = {
     hostname                    = "${var.hostname}"
@@ -37,5 +37,3 @@ data "template_file" "user_data" {
     supplementary_user_data     = "${var.supplementary_user_data}"
   }
 }
-
-

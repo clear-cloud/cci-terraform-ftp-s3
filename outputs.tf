@@ -1,4 +1,3 @@
-
 #
 # Define outputs
 #
@@ -10,6 +9,5 @@ output "asg_id" {
 
 output "public_ip" {
   description = "EIP public IP"
-  value = "${join(",", aws_eip.ftp.*.public_ip)}"
+  value       = "${join(",", aws_eip.ftp.*.public_ip)}"
 }
-
