@@ -24,10 +24,9 @@ resource "aws_launch_configuration" "ftp" {
 }
 
 # ---------------------------------------
-# Render Bastion userdata bootstrap file
+# Render Bastion bootstrap file
 # ---------------------------------------
 data "template_file" "user_data" {
-  depends_on = ["aws_eip.bastion"]
   template   = "${file("${path.module}/userdata.sh")}"
 
   vars {
