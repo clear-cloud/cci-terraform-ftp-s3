@@ -10,5 +10,6 @@ output "asg_id" {
 
 output "public_ip" {
   description = "EIP public IP"
-  value = "${aws_eip.ftp.public_ip}"
+
 }
+
