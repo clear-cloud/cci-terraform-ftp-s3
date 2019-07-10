@@ -30,7 +30,7 @@ data "template_file" "user_data" {
   depends_on = ["aws_eip.ftp"]
   template   = "${file("${path.module}/userdata.sh")}"
 
-  vars {
+  vars =  {
     hostname                    = "${var.hostname}"
     dns_domain_name             = "${var.dns_domain_name}"
     hosted_zone_id              = "${var.hosted_zone_id}"
