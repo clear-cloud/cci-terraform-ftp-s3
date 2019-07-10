@@ -48,7 +48,7 @@ make install
 # ----------------
 # Install VSFTPD 
 # ----------------
-yum install vsftpd
+yum install -y vsftpd
 systemctl enable vsftpd && systemctl start vsftpd
 # ----------------
 # Install CodeDeploy agent
