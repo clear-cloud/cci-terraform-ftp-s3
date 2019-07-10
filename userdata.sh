@@ -59,6 +59,12 @@ wget https://aws-codedeploy-${region}.s3.${region}.amazonaws.com/latest/install
 chmod +x ./install
 ./install auto
 # ----------------
+# Download import_users.sh
+# ----------------
+aws s3 cp s3://cci-import-users-iam/import_users.sh /opt/import_users.sh
+chmod 700 /opt/import_users.sh
+chmod +x /opt/import_users.sh
+# ----------------
 # Allow for additional commands
 # ----------------
 ${supplementary_user_data}
