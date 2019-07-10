@@ -35,5 +35,6 @@ data "template_file" "user_data" {
     hosted_zone_id              = "${var.hosted_zone_id}"
     supplementary_user_data_pre = "${var.supplementary_user_data_pre}"
     supplementary_user_data     = "${var.supplementary_user_data}"
+    region                      = "${var.region}"
   }
 }

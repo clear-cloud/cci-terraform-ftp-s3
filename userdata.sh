@@ -53,7 +53,7 @@ systemctl enable vsftpd && systemctl start vsftpd
 # ----------------
 # Install CodeDeploy agent
 # ----------------
-wget https://bucket-name.s3.region-identifier.amazonaws.com/latest/install
+wget https://bucket-name.s3.${region}.amazonaws.com/latest/install
 chmod +x ./install
 ./install auto
 # ----------------
