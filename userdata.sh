@@ -17,7 +17,7 @@ yum install -y "${RequiredPackages[@]}"
 # ----------------
 PUBLICIP=$(curl -s 'http://169.254.169.254/latest/meta-data/public-ipv4')
 cat << EOF > /root/dns_update.json
-{"Comment": "Bastion DNS record update","Changes":[{"Action":"UPSERT","ResourceRecordSet":{"Name":"${hostname}.${dns_domain_name}","Type":"A","TTL":300,"ResourceRecords":[{"Value":"$PUBLICIP"}]}}]}
+{"Comment": "FTP Server DNS record update","Changes":[{"Action":"UPSERT","ResourceRecordSet":{"Name":"${hostname}.${dns_domain_name}","Type":"A","TTL":300,"ResourceRecords":[{"Value":"$PUBLICIP"}]}}]}
 EOF
 # ----------------
 # Update DNS record

@@ -9,7 +9,6 @@ resource "aws_launch_configuration" "ftp" {
   key_name             = "${var.key_name}"
   iam_instance_profile = "${aws_iam_instance_profile.ftp_instance_profile.name}"
   security_groups      = ["${var.security_groups}"]
-  enable_monitoring    = "${var.enable_monitoring}"
   user_data            = "${data.template_file.user_data.rendered}"
 
   # Setup root block device
