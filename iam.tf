@@ -30,6 +30,7 @@ resource "aws_iam_role" "ftp_role" {
 }
 EOF
 }
+
 # ---------------------------------
 # Attach FTP Policy to Role
 # ---------------------------------
@@ -37,6 +38,7 @@ resource "aws_iam_role_policy_attachment" "ftp_attach_ec2_policy" {
   role       = "${aws_iam_role.ftp_role.name}"
   policy_arn = "${aws_iam_policy.ftp_policy.arn}"
 }
+
 # ------------------
 # FTP IAM Policy
 # ------------------
@@ -104,4 +106,3 @@ resource "aws_iam_role_policy_attachment" "ftp_attach_ssm_policy" {
   role       = "${aws_iam_role.ftp_role.name}"
   policy_arn = "${var.aws_ssm_iam_arn}"
 }
-

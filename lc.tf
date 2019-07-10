@@ -38,4 +38,3 @@ data "template_file" "user_data" {
     supplementary_user_data     = "${var.supplementary_user_data}"
   }
 }
-

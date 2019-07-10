@@ -15,4 +15,3 @@ resource "aws_s3_bucket" "ftp" {
     purpose       = "${var.environment}-ftp-s3-data"
   }
 }
-

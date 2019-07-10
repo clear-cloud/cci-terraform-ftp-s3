@@ -6,8 +6,8 @@ variable "eip_static" {
 }
 
 variable "supplementary_user_data_pre" {
-   description = "Supplementary shell script commands for adding to user data.Runs at beginning of userdata"
-  default = "#"
+  description = "Supplementary shell script commands for adding to user data.Runs at beginning of userdata"
+  default     = "#"
 }
 
 variable "hosted_zone_id" {
@@ -98,4 +98,3 @@ variable "supplementary_user_data" {
   description = "Supplementary shell script commands for adding to user data."
   default     = ""
 }
-
