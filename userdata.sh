@@ -65,6 +65,12 @@ aws s3 cp s3://cci-import-users-iam/import_users.sh /opt/import_users.sh
 chmod 700 /opt/import_users.sh
 chmod +x /opt/import_users.sh
 # ----------------
+# Add s3fs mount to fstab ( see README for bug )
+# ----------------
+mkdir /s3home && chmod 755 /s3home
+echo 's3fs#${s3_bucket} /s3home/ fuse _netdev,allow_other,nonempty 0 0' >> /etc/fstab
+mount -a
+# ----------------
 # Allow for additional commands
 # ----------------
 ${supplementary_user_data}
