@@ -10,8 +10,11 @@ yum update -y
 # ----------------
 # Install required utilities 
 # ----------------
-RequiredPackages=(awscli lsof git wget ruby)
-yum install -y "${RequiredPackages[@]}"
+yum install -y awscli
+yum install -y lsof
+yum install -y git
+yum install -y wget
+yum install -y ruby
 # ----------------
 # Setup DNS record update
 # ----------------
