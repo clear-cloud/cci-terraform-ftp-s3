@@ -45,6 +45,8 @@ cd s3fs-fuse/
 ./configure --prefix=/usr --with-openssl
 make
 make install
+touch /etc/passwd-s3fs
+chmod 640 /etc/passwd-s3fs
 # ----------------
 # Install VSFTPD 
 # ----------------
