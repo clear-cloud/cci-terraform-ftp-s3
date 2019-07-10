@@ -7,4 +7,4 @@ Creates a FTP service backed by s3
 3. VSFTPD - "very secure FTP daemon"
 4. Amazon CodeDeploy agent
 
-# Default installations are added by default. It is advised to then deploy configuration via CodeDeploy, Ansible etc to ensure a secure deployment. 
+#### Default installations are added by default. It is advised to then deploy configuration via CodeDeploy, Ansible etc to ensure a secure deployment. 
