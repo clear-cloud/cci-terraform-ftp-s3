@@ -110,7 +110,7 @@ resource "aws_iam_role_policy_attachment" "ftp_attach_ssm_policy" {
 # ---------------------------------
 # Attach AWS IAM RO Policy to Role
 # ---------------------------------
-resource "aws_iam_role_policy_attachment" "ftp_attach_ssm_policy" {
+resource "aws_iam_role_policy_attachment" "ftp_attach_am_ro_policy" {
   role       = "${aws_iam_role.ftp_role.name}"
   policy_arn = "arn:aws:iam::aws:policy/IAMReadOnlyAccess"
 }
