@@ -72,6 +72,19 @@ resource "aws_iam_policy" "ftp_policy" {
       ]
     },
     {
+      "Sid": "CWLogsAllow",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+        "logs:DescribeLogStreams"
+    ],
+      "Resource": [
+        "arn:aws:logs:*:*:*"
+    ]
+    },
+    {
        "Sid": "s3List",
        "Effect": "Allow",
        "Action": [
