@@ -20,6 +20,7 @@ resource "aws_launch_configuration" "ftp" {
   # Create before destroy
   lifecycle {
     create_before_destroy = true
+    ignore_changes = ["user_data"]
   }
 }
 
